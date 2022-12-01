@@ -7,14 +7,21 @@ def swap(A, i, j):
     A[j] = temp
 
 
+# def nb_ou(mot):
+#     compteur = 0
+#     for k in range(len(mot)-1):
+#         if mot[k]+mot[k+1] == "ou":
+#             compteur = compteur +1
+#     return compteur
 
-compteur = 0
-
+compteurEchange = 0
+compteurComparaison = 0
     
 
 # Fonction pour effectuer un tri à bulles sur une liste
 def bubbleSort(A):
-    global compteur;
+    global compteurEchange
+    global compteurComparaison
     # `len(A)-1` passes
     for k in range(len(A) - 1):
  
@@ -23,8 +30,10 @@ def bubbleSort(A):
         for i in range(len(A) - 1 - k):
             if A[i] > A[i + 1]:
                 swap(A, i, i + 1)
-                compteur += 1
-                print(f"Le compteur est {compteur} : {A} ");
+                compteurEchange += 3
+                compteurComparaison += 1
+                print(f"{compteurComparaison}/ Le compteurEchange est {compteurEchange} : {A} \n ")
+             
                 
     return A
     # l'algorithme peut être terminé si la boucle interne n'a pas fait d'échange
