@@ -1,3 +1,4 @@
+import random
 # Fonction utilitaire pour échanger des valeurs à deux indices dans la liste
 def swap(A, i, j):
  
@@ -21,5 +22,10 @@ def bubbleSort(A):
     # l'algorithme peut être terminé si la boucle interne n'a pas fait d'échange
  
  
-tab = [0,2,1,3,4,1]
-print(bubbleSort(tab))
+def randomtab (min,max,nbr):
+    tab = []
+    for i in range(nbr):
+        tab.append(random.randint(min,max))
+    return tab
+
+print(bubbleSort(randomtab(1,100,30)))

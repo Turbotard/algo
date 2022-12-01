@@ -1,3 +1,4 @@
+import random 
 """
 
 
@@ -24,8 +25,12 @@ def tri_insertion(tableau):
         tableau[j]=en_cours
     return tableau
 
-        
-tab = [7,2,4,2,5]  
-print(tri_insertion(tab))   
-   
+def randomtab (min,max,nbr):
+    tab = []
+    for i in range(nbr):
+        tab.append(random.randint(min,max))
+    return tab
+
+print(tri_insertion(randomtab(1,100,30)))
+
     
