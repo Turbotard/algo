@@ -11,7 +11,6 @@ import random
 
 """
 
-
 def tri_selection(tableau):
     nb = len(tableau)
     for en_cours in range(0,nb):    
