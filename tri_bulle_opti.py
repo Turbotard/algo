@@ -33,11 +33,13 @@ def bubbleSort(A):
                 compteurEchange += 3
                 compteurComparaison += 1
                 print(f"{compteurComparaison}/ Le compteurEchange est {compteurEchange} : {A} \n ")
+                
              
                 
     return A
+
+
     # l'algorithme peut être terminé si la boucle interne n'a pas fait d'échange
- 
  
 def randomtab (min,max,nbr):
     tab = []
@@ -45,4 +47,4 @@ def randomtab (min,max,nbr):
         tab.append(random.randint(min,max))
     return tab
 
-print(bubbleSort(randomtab(1,100,30)))
+print(f"{bubbleSort(randomtab(1,100,30))} , \n la performance est de : {compteurComparaison + compteurEchange}")
