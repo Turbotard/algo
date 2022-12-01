@@ -14,8 +14,14 @@ import random
     TANT QUE permut = VRAI
 
 """
+
+compteurEchange = 0
+compteurComparaison = 0
+
 tab = [0,3,2,1]
 def tri_bulle(tableau):
+    global compteurEchange
+    global compteurComparaison
     permutation = True
     passage = 0
     while permutation == True:
@@ -27,6 +33,8 @@ def tri_bulle(tableau):
                 # On echange les deux elements
                 tableau[en_cours], tableau[en_cours + 1] = \
                 tableau[en_cours + 1],tableau[en_cours]
+                compteurEchange += 3
+        compteurComparaison += 1
     return tableau  
 def randomtab (min,max,nbr):
     tab = []
@@ -34,4 +42,4 @@ def randomtab (min,max,nbr):
         tab.append(random.randint(min,max))
     return tab
 
-print(tri_bulle(randomtab(1,100,30)))
+print(f"{tri_bulle(randomtab(1,100,30))} , \n la performance est de : {compteurComparaison + compteurEchange}")
