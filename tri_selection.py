@@ -10,8 +10,12 @@ import random
 
 
 """
+compteurEchange = 0
+compteurComparaison = 0
 
 def tri_selection(tableau):
+    global compteurEchange
+    global compteurComparaison
     nb = len(tableau)
     for en_cours in range(0,nb):    
         plus_petit = en_cours
@@ -22,6 +26,8 @@ def tri_selection(tableau):
             temp = tableau[en_cours]
             tableau[en_cours] = tableau[plus_petit]
             tableau[plus_petit] = temp
+            compteurEchange += 3
+        compteurComparaison += 1
     return tableau
 
 def randomtab (min,max,nbr):
@@ -30,4 +36,4 @@ def randomtab (min,max,nbr):
         tab.append(random.randint(min,max))
     return tab
 
-print(tri_selection(randomtab(1,100,30)))
+print(f"{tri_selection(randomtab(1,100,30))} , \n la performance est de : {compteurComparaison + compteurEchange}")

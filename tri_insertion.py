@@ -9,17 +9,24 @@ import random
 
 
 """
+compteurEchange = 0
+compteurComparaison = 0
 
 def tri_insertion(tableau):
+    global compteurEchange
+    global compteurComparaison
     for i in range(1,len(tableau)):
         en_cours = tableau[i]
         j = i
+        compteurComparaison += 1
         #décalage des éléments du tableau }
         while j>0 and tableau[j-1]>en_cours:
             tableau[j]=tableau[j-1]
             j = j-1
+            compteurEchange += 3
         #on insère l'élément à sa place
         tableau[j]=en_cours
+    
     return tableau
 
 def randomtab (min,max,nbr):
@@ -28,6 +35,6 @@ def randomtab (min,max,nbr):
         tab.append(random.randint(min,max))
     return tab
 
-print(tri_insertion(randomtab(1,100,30)))
+print(f"{tri_insertion(randomtab(1,100,30))} , \n la performance est de : {compteurComparaison + compteurEchange}")
 
     
