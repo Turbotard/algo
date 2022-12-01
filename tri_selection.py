@@ -1,3 +1,4 @@
+import random
 """
 
 
@@ -9,7 +10,6 @@
 
 
 """
-
 
 def tri_selection(tableau):
     nb = len(tableau)
@@ -24,5 +24,10 @@ def tri_selection(tableau):
             tableau[plus_petit] = temp
     return tableau
 
-tab = [7,2,4,2,5]  
-print(tri_selection(tab))   
+def randomtab (min,max,nbr):
+    tab = []
+    for i in range(nbr):
+        tab.append(random.randint(min,max))
+    return tab
+
+print(tri_selection(randomtab(1,100,30)))

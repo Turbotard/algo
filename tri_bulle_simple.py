@@ -1,3 +1,4 @@
+import random
 """
     PROCEDURE tri_bulle normal ( TABLEAU a[1:n])
     passage ← 0
@@ -27,4 +28,10 @@ def tri_bulle(tableau):
                 tableau[en_cours], tableau[en_cours + 1] = \
                 tableau[en_cours + 1],tableau[en_cours]
     return tableau  
-print(tri_bulle(tab))
+def randomtab (min,max,nbr):
+    tab = []
+    for i in range(nbr):
+        tab.append(random.randint(min,max))
+    return tab
+
+print(tri_bulle(randomtab(1,100,30)))
