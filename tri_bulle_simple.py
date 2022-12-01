@@ -27,4 +27,6 @@ def tri_bulle(tableau):
                 tableau[en_cours], tableau[en_cours + 1] = \
                 tableau[en_cours + 1],tableau[en_cours]
     return tableau  
-print(tri_bulle(tab))
+tab = [7,2,4,2,5]  
+print(tri_bulle(tab))   
+
