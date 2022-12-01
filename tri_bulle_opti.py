@@ -32,10 +32,6 @@ def bubbleSort(A):
                 swap(A, i, i + 1)
                 compteurEchange += 3
                 compteurComparaison += 1
-                print(f"{compteurComparaison}/ Le compteurEchange est {compteurEchange} : {A} \n ")
-                
-             
-                
     return A
 
 
