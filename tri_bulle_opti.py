@@ -6,14 +6,6 @@ def swap(A, i, j):
     A[i] = A[j]
     A[j] = temp
 
-
-# def nb_ou(mot):
-#     compteur = 0
-#     for k in range(len(mot)-1):
-#         if mot[k]+mot[k+1] == "ou":
-#             compteur = compteur +1
-#     return compteur
-
 compteurEchange = 0
 compteurComparaison = 0
     

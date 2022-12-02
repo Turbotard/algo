@@ -1,6 +1,10 @@
 import random
 """
+    initialisation du compteurEchange à 0
+    initialisation du compteurComparaison à 0
     PROCEDURE tri_bulle normal ( TABLEAU a[1:n])
+    informer que compteurEchange est utilisé à l'intérieur et l'extérieur de tri_Selection
+    informer que compteurComparaison est utilisé à l'intérieur et l'extérieur de tri_Selection
     passage ← 0
     REPETER
         permut ← FAUX
@@ -8,7 +12,9 @@ import random
             SI a[i] > a[i+1] ALORS
                 echanger a[i] ET a[i+1]
                 permut ← VRAI
+                COMPTER L'ECHANGE DE 3 EN 3
             FIN SI
+            COMPTER LA COMPARAISON DE 1 EN 1
         FIN POUR
         passage ← passage + 1
     TANT QUE permut = VRAI

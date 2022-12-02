@@ -1,11 +1,17 @@
 import random
 """
-
+    initialisation du compteurEchange à 0
+    initialisation du compteurComparaison à 0
 
     PROCEDURE tri_Selection ( Tableau a[1:n])
+        informer que compteurEchange est utilisé à l'intérieur et l'extérieur de tri_Selection
+        informer que compteurComparaison est utilisé à l'intérieur et l'extérieur de tri_Selection
         POUR i VARIANT DE 1 A n - 1 FAIRE
             TROUVER [j] LE PLUS PETIT ELEMENT DE [i + 1:n];
             ECHANGER [j] ET [i];
+            COMPTER L'ECHANGE DE 3 EN 3
+            COMPTER LA COMPARAISON DE 1 EN 1
+
     FIN PROCEDURE;
 
 
