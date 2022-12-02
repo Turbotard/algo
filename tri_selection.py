@@ -35,11 +35,14 @@ def tri_selection(tableau):
             compteurEchange += 3
         compteurComparaison += 1
     return tableau
+    
+performance_selection = compteurComparaison + compteurEchange
 
 def randomtab (min,max,nbr):
     tab = []
     for i in range(nbr):
         tab.append(random.randint(min,max))
     return tab
-
-print(f"{tri_selection(randomtab(1,100,30))} , \n la performance est de : {compteurComparaison + compteurEchange}")
+liste = [3, 6, 13, 15, 16, 21, 22, 22, 23, 35, 36, 37, 42, 47, 54, 57, 63, 68, 69, 70, 81, 86, 88, 90, 93, 93, 95, 95, 98, 99]
+rev=list(reversed(liste))
+print(f"{tri_selection(rev)} , \n la performance est de : {compteurComparaison + compteurEchange}")
