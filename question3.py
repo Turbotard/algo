@@ -1,4 +1,4 @@
-import random
+import random as rd
 def suite(ls, fin):
     while(ls[-1] < fin):
         ls.append(ls[-1] + ls[-2])
@@ -35,7 +35,7 @@ def stat(min, max, step, nbr):
     for i in range(min, max + step, step):
         acc = 0
         for n in range(nbr):
-            ls = [random.randint(0, 100) for _ in range(i)]
+            ls = [rd.randint(0, 100) for _ in range(i)]
             acc += bubbleSort(ls)
         print(i, acc / nbr *0.1)
 stat(10, 20, 5, 500)
