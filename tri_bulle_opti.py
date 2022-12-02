@@ -1,4 +1,3 @@
-import random
 # Fonction utilitaire pour échanger des valeurs à deux indices dans la liste
 def swap(A, i, j):
  
@@ -6,14 +5,15 @@ def swap(A, i, j):
     A[i] = A[j]
     A[j] = temp
 
+
 compteurEchange = 0
 compteurComparaison = 0
-    
+ 
+ 
 
 # Fonction pour effectuer un tri à bulles sur une liste
 def bubbleSort(A):
-    global compteurEchange
-    global compteurComparaison
+ 
     # `len(A)-1` passes
     for k in range(len(A) - 1):
  
@@ -22,17 +22,9 @@ def bubbleSort(A):
         for i in range(len(A) - 1 - k):
             if A[i] > A[i + 1]:
                 swap(A, i, i + 1)
-                compteurEchange += 3
-                compteurComparaison += 1
     return A
-
-
     # l'algorithme peut être terminé si la boucle interne n'a pas fait d'échange
  
-def randomtab (min,max,nbr):
-    tab = []
-    for i in range(nbr):
-        tab.append(random.randint(min,max))
-    return tab
-
-print(f"{bubbleSort(randomtab(1,100,30))} , \n la performance est de : {compteurComparaison + compteurEchange}")
+ 
+tab = [0,2,1,3,4,1]
+print(bubbleSort(tab))
